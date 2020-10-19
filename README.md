@@ -1,1 +1,1 @@
-"# algorithm-interview" 
+이곳은 [파이썬 알고리즘 인터뷰](http://www.yes24.com/Product/Goods/91084402)를 함께 공부하려고 만든 곳입니다. 일단 시작이 중요합니다.
