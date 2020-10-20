@@ -1,4 +1,4 @@
 print("hello")
 
 for i in range(1, 10):
-    print(i)
+    print(i)    # 재밌어?
