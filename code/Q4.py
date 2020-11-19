@@ -15,7 +15,12 @@ print(lowstr)
 
 # 알파벳만 남겨
 only_char_str = " ".join(re.findall("[a-zA-Z]+", lowstr))
+only_char_str2 = re.sub('[^a-z0-9 ]','', lowstr)  # better
+
+print("-")
 print(only_char_str)
+print(only_char_str2)
+print("-")
 
 # 금지단어 제거
 for i in banned:
@@ -28,6 +33,7 @@ print(word_list)
 
 # 카운터 사용
 count = Counter(word_list)
+print(count.most_common(1))
 print(count.most_common(1)[0][0])
 
 

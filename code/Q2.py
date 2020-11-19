@@ -35,13 +35,13 @@ def reverse_list1(l) -> None:
 
 def reverse_list2(l) -> None:
     print("input:{}".format(l))
-    l.reverse()
+    l.reverse() # 리턴값이 있는 건지, 값을 바꾸는 건지 확인하는데 어려움이 있었다.
     print("output:{}".format(l))
 
 
 def reverse_list3(l) -> None:
     print("input:{}".format(l))
-    l[:] = l[::-1]  # l = l[::-1]은 모호하다는 경고가 뜬다
+    l[:] = l[::-1]  # l = l[::-1]은 모호하다는 경고가 뜬다, 구문적인 이해 찾아볼 필요가 있음
     print("output:{}".format(l))
 
 
