@@ -8,7 +8,7 @@ output = [
          ]
 
 # 머리속 풀이
-# 각 문자열을 소팅한 후에 같은 것 끼리 묶음 -> 소팅한 문자열을 Key로 하고 같은 그룹의 문자열 리스트를 Value 만들면 될 것 같다.
+# 각 문자열을 소팅한 후에 같은 것 끼리 묶음 -> 소팅한 문자열을 Key로 하고 같은 그룹의 문자열 리스트를 Value 만들면 될 듯
 
 output_dict = {}  # declare dict
 
@@ -35,6 +35,8 @@ for i in output_dict.values():
     output_list.append(i)  # 리스트의 리스트 만들기
 
 print(output_list)
+print(list(output_dict.values()))
+
 
 
 
