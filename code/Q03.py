@@ -51,7 +51,7 @@ def arrange2(logs: list) -> list:
         else:
             alogs.append(log)
 
-    alogs.sort(key=lambda x: (x.split()[1], x.split()[0]))
+    alogs.sort(key=lambda x: (x.split()[1:], x.split()[0]))
     return alogs + nlogs
 
 
