@@ -15,7 +15,7 @@ print(lowstr)
 
 # 알파벳만 남겨
 only_char_str = " ".join(re.findall("[a-zA-Z]+", lowstr))
-only_char_str2 = re.sub('[^a-z0-9 ]','', lowstr)  # better
+only_char_str2 = re.sub('[^a-z0-9 ]', '', lowstr)  # better
 
 print("-")
 print(only_char_str)
