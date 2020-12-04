@@ -5,36 +5,40 @@
 import re
 from collections import Counter
 
+
+def func1(input_str: str) -> None:
+
+    lowstr = input_str.lower()  # 소문자로 바꿔
+    # print(lowstr)
+
+    # 알파벳만 남겨
+    only_char_str = " ".join(re.findall("[a-zA-Z]+", lowstr))
+    # only_char_str2 = re.sub('[^a-z0-9 ]', '', lowstr)  # better
+
+    # print("-")
+    # print(only_char_str)
+    # print(only_char_str2)
+    # print("-")
+
+    # 금지단어 제거
+    for i in banned:
+        remove_banned = only_char_str.replace(i, "")
+    # print(remove_banned)
+
+    # 리스트 전환
+    word_list = remove_banned.split()
+    # print(word_list)
+
+    # 카운터 사용
+    count = Counter(word_list)
+    # print(count.most_common(1))
+    print(count.most_common(1)[0][0])
+
+
 paragraph = "Bob hit a ball, the hit BALL flew far after it was hit."
 banned = ["hit"]
 expected = "ball"
 
-# 소문자로 바꿔
-lowstr = paragraph.lower()
-print(lowstr)
-
-# 알파벳만 남겨
-only_char_str = " ".join(re.findall("[a-zA-Z]+", lowstr))
-only_char_str2 = re.sub('[^a-z0-9 ]', '', lowstr)  # better
-
-print("-")
-print(only_char_str)
-print(only_char_str2)
-print("-")
-
-# 금지단어 제거
-for i in banned:
-    remove_banned = only_char_str.replace(i, "")
-print(remove_banned)
-
-# 리스트 전환
-word_list = remove_banned.split()
-print(word_list)
-
-# 카운터 사용
-count = Counter(word_list)
-print(count.most_common(1))
-print(count.most_common(1)[0][0])
-
+func1(paragraph)
 
 

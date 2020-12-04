@@ -35,7 +35,7 @@ def reverse_list1(l) -> None:
 
 def reverse_list2(l) -> None:
     print("input:{}".format(l))
-    l.reverse() # 리턴값이 있는 건지, 값을 바꾸는 건지 확인하는데 어려움이 있었다.
+    l.reverse()  # 리턴값이 있는 건지, 값을 바꾸는 건지 확인하는데 어려움이 있었다.
     print("output:{}".format(l))
 
 
