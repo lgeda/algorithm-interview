@@ -3,6 +3,7 @@
 # 출력: [24, 12, 8, 6]
 # 조건: 나눗셈을 하지 않고 O(n)에 풀이하라
 from functools import reduce
+from typing import List
 
 
 def func1(input: list) -> list:
@@ -41,8 +42,27 @@ def func2(input: list) -> list:
     return ret
 
 
+def func3(input: list) -> list:
+    out = []
+    p = 1
+
+    for i in range(0, len(input)):
+        out.append(p)
+        p = p * input[i]
+
+    p = 1
+    for i in range(len(input)-1, 0-1, -1):
+        out[i] = out[i] * p
+        p = p * input[i]
+    print(out)
+    return out
+
+
 input = [1, 2, 3, 4]
 expected = [24, 12, 8, 6]
 
 print(func1(input) == expected)
 print(func2(input) == expected)
+print(func3(input) == expected)
+
+
